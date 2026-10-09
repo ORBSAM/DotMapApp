@@ -34,14 +34,16 @@ private val LightColorScheme = lightColorScheme(
 
 @Composable
 fun DotMapAppTheme(
+    // is the system in dark mode currently?
     darkTheme: Boolean = isSystemInDarkTheme(),
-    // Dynamic color is available on Android 12+
+    // dynamic color is available on Android 12+
     dynamicColor: Boolean = true,
     content: @Composable () -> Unit
 ) {
     val colorScheme = when {
         dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
             val context = LocalContext.current
+            // if in dark mode, use dark mode colors. otherwise, light mode colors are fine
             if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
         }
 
