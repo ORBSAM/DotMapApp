@@ -234,10 +234,17 @@ fun MapDotsScreen(vm: DotViewModel) {
 /**
  * AddDotDialog
  *
+ *  When you tap, you are asked to add a dot.
+ *  A few options: colors, and then a description.
+ *
+ *  @param onDismiss - nothing is changed if dismissed
+ *  @param onConfirm - if confirmed, the dot color and description are stored
  */
 @Composable
 fun AddDotDialog(onDismiss: () -> Unit, onConfirm: (String, DotColor) -> Unit) {
+    // default description is empty
     var desc by remember { mutableStateOf("") }
+    // default dot color is red
     var color by remember { mutableStateOf(DotColor.RED) }
 
     AlertDialog(

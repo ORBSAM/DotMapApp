@@ -49,8 +49,11 @@ dependencies {
     implementation("com.google.maps.android:maps-compose:6.1.0")
     implementation("com.google.android.gms:play-services-maps:19.0.0")
     implementation("com.google.android.gms:play-services-location:21.0.1")
-    // implementation(libs.androidx.compose.foundation)
-
+    // while not being used, maplibre is a much better option than google maps
+    // maybe use for the actual app? i don't like handing over card numbers to
+    // big G in FAANG
+    //implementation("org.maplibre.gl:android-sdk:13.6.1")
+    // implementation("androidx.lifecycle:lifecycle-runtime-compose:2.8.6")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.3")
 
     implementation(platform(libs.androidx.compose.bom))
