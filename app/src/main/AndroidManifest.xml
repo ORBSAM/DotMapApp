@@ -11,21 +11,20 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/ic_launcher_background"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MapDots"
+        android:theme="@style/Theme.DotMapApp"
         tools:replace="android:theme">
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="YOUR_API_KEY_HERE" />
-
+            android:value="{MAPS_API_KEY}" />
 
         <activity
             android:name=".MainActivity"
-            android:theme="@style/Theme.DotMapApp.Splash"
+            android:theme="@style/Theme.SplashScreen"
             android:exported="true"
-            android:label="@string/app_name"
-            android:windowSoftInputMode="adjustResize">
+            android:windowSoftInputMode="adjustResize"
+            tools:ignore="MissingClass">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
