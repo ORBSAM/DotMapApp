@@ -21,7 +21,7 @@
 
         <activity
             android:name=".MainActivity"
-            android:theme="@style/Theme.SplashScreen"
+            android:theme="@style/Theme.DotMapApp.Splash"
             android:exported="true"
             android:windowSoftInputMode="adjustResize"
             tools:ignore="MissingClass">
